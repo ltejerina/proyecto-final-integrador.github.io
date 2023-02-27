@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Curriculúm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <nav class="navbar navbar-color p-3 fixed-top">
+    <div class="container-fluid">
+      <button class="btn fw-bold btn-color btn-outline-light my-2 my-sm-0 m-2"><a class="descarga" download="Curriculúm.pdf" href="Curriculúm.pdf">Descargar Curriculúm</a></button>
+      <a href="#" class="nav-item nav-link"><i class="fa-brands fa-facebook-messenger"></i></a>
+    </div>
+    </div>
+  </nav>
+  <div class="p-5 text-center bg-image portada">
+    <div>
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Curriculúm digital</h1>
+          <a class="btn btn-outline-light btn-lg" onclick="cargar()" id="empezar" role="button">Cargar Datos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</head>
+
+<body>
+  <div hidden id="body-text" class="container-fluid p-2">
+    <div class="container">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="card border-success border-3">
+          <div class="card-content ">
+            <div class="row">
+              <div class="col col-md-4 col-sm-4 col-xs-4">
+                <ul>
+                  <div class="m-4">
+                    <img class="img-fluid" id="foto">
+                    <div>
+                      <h4 id="nombre"></h4>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+              <div class="col col-md-8 col-sm-8 col-xs-8 ">
+                <br>
+                <ul>
+                  <li>
+                    <span><i class="fw-bold">Email: </i></span>
+                    <span id="email"></span>
+                  </li>
+                  <li>
+                    <span><i class="fw-bold">Genero: </i></span>
+                    <span id="genero"></span>
+                  </li>
+                  <li>
+                    <span><i class="fw-bold">Fecha de nacimiento: </i></span>
+                    <span id="fecha"></span>
+                  </li>
+                  <li>
+                    <span><i class="fw-bold">Celular: </i></span>
+                    <span id="celular"></span>
+                  </li>
+                  <li>
+                    <span><i class="fw-bold">Dirección: </i></span>
+                    <span id="direccion"> </span>
+                    <span class="card-text" id="genero"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card border-success border-3">
+          <div class="card-content">
+            <div class="row">
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                  <div class="m-4">
+                    <h3 class="p-2">Educación</h3>
+                    <ul>
+                      <li>
+                        <span><i class="fw-bold">Universidad: </i></span>
+                        <span id="universidad"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Carrera: </i></span>
+                        <span>Derecho</span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Años: </i></span>
+                        <span> 5 </span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Estado: </i></span>
+                        <span>Finalizado</span>
+                      </li>
+                    </ul>
+                </ul>
+              </div>
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <img class="img-fluid p-4 d-none d-sm-block" src="https://www.cippec.org/wp-content/uploads/2021/09/160542736_m-1024x536.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="card border-success border-3">
+          <div class="card-content">
+            <div class="row">
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                  <div class="m-4">
+                    <h3 class="p-2">Experencias</h3>
+                    <h6 class="p-2">Trabajos</h6>
+                    <ul>
+                      <li>
+                        <span><i class="fw-bold">Puesto: </i></span>
+                        <span id="ocupacion"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Nombre del lugar: </i></span>
+                        <span id="compania"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Rubro: </i></span>
+                        <span id="area"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Direccion: </i></span>
+                        <span id="lugar"></span>
+                      </li>
+                    </ul>
+                </ul>
+              </div>
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <img class="img-fluid p-4 d-none d-sm-block" src="https://cdn.bizneo.com/blog/wp-content/uploads/2022/05/tiempo-efectivo-de-trabajo-810x498.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="card border-success border-3">
+          <div class="card-content">
+            <div class="row">
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                  <div class="m-4">
+                    <h3 class="p-2">Habilidades</h3>
+                    <ul>
+                      <li>
+                        <span><i class="fw-bold">Multilingüismo </i></span>
+                        <span id="ocupacion"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Adaptabilidad</i></span>
+                        <span id="compania"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Trabajo en equipo </i></span>
+                        <span id="area"></span>
+                      </li>
+                      <li>
+                        <span><i class="fw-bold">Competencias digitales </i></span>
+                        <span id="lugar"></span>
+                      </li>
+                    </ul>
+                    <h3 class="p-2">Cursos</h3>
+                  <ul>
+                    <li>
+                      <span><i class="fw-bold"> Automotriz - </i></span>
+                      <a download="certificado.jpg" href="certificado.jpg"> Descargar Certificado</a>
+                    </li>
+                    <li>
+                      <span><i class="fw-bold">Electricidad Domiciliaria -</i></span>
+                      <a download="certificado.jpg" href="certificado.jpg"> Descargar Certificado</a>
+                    </li>
+                    <li>
+                      <span><i class="fw-bold">Administración y Negocios -</i></span>
+                      <a download="certificado.jpg" href="certificado.jpg"> Descargar Certificado</a>
+                    </li>
+                    <li>
+                      <span><i class="fw-bold">Banca y Finanzas: -</i></span>
+                      <a download="certificado.jpg" href="certificado.jpg"> Descargar Certificado</a>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="col col-md-6 col-sm-6 col-xs-6">
+                <img class="img-fluid p-4 d-none d-sm-block" src="https://opem.b-cdn.net/wp-content/uploads/2022/12/aptitudes-para-curriculum-768x512.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+          </div>
+          <div class="col-lg-3 col-md-6">
+          </div>
+          <div class="col-lg-3 col-md-6">
+          </div>
+          <div class="col-lg-3 col-md-6">
+          </div>
+        </div>
+      </div>
+      <div class="footer_bg">
+        <div class="footer_bg_one"></div>
+        <div class="footer_bg_two"></div>
+      </div>
+    </div>
+    <br>
+  </footer>
+</body>
+</html>
